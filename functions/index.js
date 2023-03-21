@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors"
 import functions from "firebase-functions"
-import { getAff, newAff } from "./function.js";
+import { deleteDocument, getAff, newAff } from "./function.js";
 
 const app = express()
 
@@ -13,5 +13,6 @@ app.get('/', (req,res) => {
 })
 app.get('/getaff',getAff)
 app.post('/newaff', newAff)
+app.delete('/aff/:id', deleteDocument)
 
 export const api = functions.https.onRequest(app)
