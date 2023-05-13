@@ -13,6 +13,6 @@ app.get('/', (req,res) => {
 })
 app.get('/getaff',getAff)
 app.post('/newaff', newAff)
-app.delete('/aff/:id', deleteDocument)
+app.delete('/aff/:affid', deleteDocument)
 
 export const api = functions.https.onRequest(app)

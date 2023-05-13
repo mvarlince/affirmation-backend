@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": ".",
+    "site": "mindboost-api",
     "rewrites": [{
       "source": "**",
       "function": "api"
